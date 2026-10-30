@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1160" role="img" aria-label="THE LANDS BETWEEN">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#211b19"/><stop offset="1" stop-color="#a66b3d" stop-opacity=".78"/></linearGradient>
+ <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9bb65"/><stop offset="1" stop-color="#a66b3d"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#e9bb65" stop-opacity=".8"/><stop offset="1" stop-color="#e9bb65" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="48"/></filter>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="1"/></pattern>
+</defs>
+<rect width="900" height="1160" fill="url(#bg)"/><rect width="900" height="1160" fill="url(#grid)"/>
+<circle cx="270" cy="360" r="320" fill="url(#halo)" filter="url(#blur)"/>
+<g opacity=".24" fill="none" stroke="#e9bb65" stroke-width="3"><path d="M-80 250 940 0M-60 320 960 70M-40 390 980 140"/><path d="M0 860 900 550"/></g>
+<circle cx="460" cy="465" r="260" fill="none" stroke="#f0c46d" stroke-width="20" opacity=".8"/><circle cx="460" cy="465" r="205" fill="none" stroke="#f0c46d" stroke-width="3" opacity=".5"/><path d="M440 170 510 425 700 360 565 520 690 690 470 590 280 730 360 520 180 380 390 420z" fill="url(#glow)" opacity=".55"/><path d="M0 800 200 590l150 140 130-215 180 230 110-125 130 180v360H0z" fill="#14141a"/><path d="M0 900 210 740l120 100 190-185 140 200 120-100 120 130v275H0z" fill="#0c1015"/><g font-family="Arial,sans-serif" fill="#fff"><text x="58" y="88" font-size="23" letter-spacing="8" opacity=".8">PIXELVERSE / PC GAME</text><path d="M58 112H842" stroke="#fff" stroke-opacity=".3"/><text x="58" y="1005" font-size="58" font-weight="700" letter-spacing="2">THE LANDS</text><text x="58" y="1075" font-size="50" font-weight="700" letter-spacing="2" fill="#e9bb65">BETWEEN</text><text x="842" y="1120" text-anchor="end" font-size="18" letter-spacing="6" opacity=".65">02 / 12</text></g></svg>

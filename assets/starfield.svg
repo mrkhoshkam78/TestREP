@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1160" role="img" aria-label="INTO THE STARFIELD">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101b2d"/><stop offset="1" stop-color="#9a8cf3" stop-opacity=".78"/></linearGradient>
+ <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8fc7ef"/><stop offset="1" stop-color="#9a8cf3"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#8fc7ef" stop-opacity=".8"/><stop offset="1" stop-color="#8fc7ef" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="48"/></filter>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="1"/></pattern>
+</defs>
+<rect width="900" height="1160" fill="url(#bg)"/><rect width="900" height="1160" fill="url(#grid)"/>
+<circle cx="600" cy="360" r="320" fill="url(#halo)" filter="url(#blur)"/>
+<g opacity=".24" fill="none" stroke="#8fc7ef" stroke-width="3"><path d="M-80 250 940 0M-60 320 960 70M-40 390 980 140"/><path d="M0 860 900 550"/></g>
+<circle cx="670" cy="300" r="180" fill="url(#glow)" opacity=".7"/><ellipse cx="670" cy="300" rx="290" ry="62" fill="none" stroke="#c9e4ff" stroke-width="9" transform="rotate(-18 670 300)"/><g fill="#fff"><circle cx="150" cy="170" r="5"/><circle cx="250" cy="350" r="4"/><circle cx="760" cy="610" r="5"/><circle cx="190" cy="660" r="3"/><circle cx="520" cy="120" r="4"/></g><path d="M0 820 150 730l115 65 150-180 150 190 130-90 205 120v325H0z" fill="#0a101c"/><path d="M365 790 450 530l85 260-85-45z" fill="#c9e7ff" opacity=".8"/><path d="m430 680 20-150 20 150" fill="#fff"/><g font-family="Arial,sans-serif" fill="#fff"><text x="58" y="88" font-size="23" letter-spacing="8" opacity=".8">PIXELVERSE / PC GAME</text><path d="M58 112H842" stroke="#fff" stroke-opacity=".3"/><text x="58" y="1005" font-size="58" font-weight="700" letter-spacing="2">INTO THE</text><text x="58" y="1075" font-size="50" font-weight="700" letter-spacing="2" fill="#8fc7ef">STARFIELD</text><text x="842" y="1120" text-anchor="end" font-size="18" letter-spacing="6" opacity=".65">11 / 12</text></g></svg>

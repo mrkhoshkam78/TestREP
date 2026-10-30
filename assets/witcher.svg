@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1160" role="img" aria-label="THE WITCHER WILD HUNT">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1d1718"/><stop offset="1" stop-color="#9b454b" stop-opacity=".78"/></linearGradient>
+ <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7b8a4"/><stop offset="1" stop-color="#9b454b"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#e7b8a4" stop-opacity=".8"/><stop offset="1" stop-color="#e7b8a4" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="48"/></filter>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="1"/></pattern>
+</defs>
+<rect width="900" height="1160" fill="url(#bg)"/><rect width="900" height="1160" fill="url(#grid)"/>
+<circle cx="270" cy="360" r="320" fill="url(#halo)" filter="url(#blur)"/>
+<g opacity=".24" fill="none" stroke="#e7b8a4" stroke-width="3"><path d="M-80 250 940 0M-60 320 960 70M-40 390 980 140"/><path d="M0 860 900 550"/></g>
+<circle cx="450" cy="390" r="225" fill="none" stroke="#edc5bd" stroke-width="6"/><path d="M250 520 390 260l150 0 110 260-200 150z" fill="url(#glow)" opacity=".6"/><path d="M0 820 180 670l120 110 155-210 140 210 145-125 160 130v375H0z" fill="#100f13"/><path d="M350 860 390 600l60-90 60 90 40 260z" fill="#080b10" stroke="#dcbdb1" stroke-width="5"/><path d="M395 600 450 545 505 600" fill="none" stroke="#f4dfd5" stroke-width="8"/><g font-family="Arial,sans-serif" fill="#fff"><text x="58" y="88" font-size="23" letter-spacing="8" opacity=".8">PIXELVERSE / PC GAME</text><path d="M58 112H842" stroke="#fff" stroke-opacity=".3"/><text x="58" y="1005" font-size="58" font-weight="700" letter-spacing="2">THE WITCHER</text><text x="58" y="1075" font-size="50" font-weight="700" letter-spacing="2" fill="#e7b8a4">WILD HUNT</text><text x="842" y="1120" text-anchor="end" font-size="18" letter-spacing="6" opacity=".65">12 / 12</text></g></svg>

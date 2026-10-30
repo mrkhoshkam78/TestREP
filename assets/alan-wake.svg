@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1160" role="img" aria-label="DARK PLACE FOLLOW THE LIGHT">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10131d"/><stop offset="1" stop-color="#8d9bf8" stop-opacity=".78"/></linearGradient>
+ <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f2eee2"/><stop offset="1" stop-color="#8d9bf8"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#f2eee2" stop-opacity=".8"/><stop offset="1" stop-color="#f2eee2" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="48"/></filter>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="1"/></pattern>
+</defs>
+<rect width="900" height="1160" fill="url(#bg)"/><rect width="900" height="1160" fill="url(#grid)"/>
+<circle cx="270" cy="360" r="320" fill="url(#halo)" filter="url(#blur)"/>
+<g opacity=".24" fill="none" stroke="#f2eee2" stroke-width="3"><path d="M-80 250 940 0M-60 320 960 70M-40 390 980 140"/><path d="M0 860 900 550"/></g>
+<circle cx="445" cy="420" r="250" fill="none" stroke="#f0eadf" stroke-width="5" opacity=".55"/><path d="M445 115v600M145 420h600" stroke="#f0eadf" stroke-width="2" opacity=".18"/><path d="M0 810 170 650l145 105 130-235 150 250 130-130 175 170v350H0z" fill="#0b0f19"/><path d="M360 860V600q85-115 170 0v260" fill="#05070c" stroke="#acb9d9" stroke-width="5"/><circle cx="445" cy="560" r="12" fill="#fff"/><g font-family="Arial,sans-serif" fill="#fff"><text x="58" y="88" font-size="23" letter-spacing="8" opacity=".8">PIXELVERSE / PC GAME</text><path d="M58 112H842" stroke="#fff" stroke-opacity=".3"/><text x="58" y="1005" font-size="58" font-weight="700" letter-spacing="2">DARK PLACE</text><text x="58" y="1075" font-size="50" font-weight="700" letter-spacing="2" fill="#f2eee2">FOLLOW THE LIGHT</text><text x="842" y="1120" text-anchor="end" font-size="18" letter-spacing="6" opacity=".65">06 / 12</text></g></svg>

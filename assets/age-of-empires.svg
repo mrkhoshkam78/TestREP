@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1160" role="img" aria-label="Age of Empires IV">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#171c22"/><stop offset="1" stop-color="#75503b"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4db9a"/><stop offset="1" stop-color="#a66b35"/></linearGradient>
+ <radialGradient id="sun"><stop stop-color="#f8d89b" stop-opacity=".8"/><stop offset="1" stop-color="#f8d89b" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="900" height="1160" fill="url(#bg)"/><rect width="900" height="1160" fill="url(#grid)"/>
+<circle cx="465" cy="430" r="330" fill="url(#sun)"/>
+<circle cx="465" cy="430" r="190" fill="none" stroke="#efd49a" stroke-width="5" opacity=".6"/>
+<path d="M0 790 120 660l90 60 140-180 125 155 150-220 115 190 160-130v625H0z" fill="#342b25"/>
+<path d="M0 900 180 770l125 90 150-170 145 175 145-120 155 125v290H0z" fill="#171b20"/>
+<g fill="#12171d" stroke="#dbb778" stroke-width="8"><path d="M270 820V500l175-170 175 170v320z"/><path d="M365 820V600h160v220"/><path d="M235 500h420l-35-65H270z"/><path d="M405 330V205h80v125"/><path d="M385 205 445 120l60 85"/></g>
+<g fill="#f0d59e" opacity=".7"><path d="M310 530h30v100h-30zM560 530h30v100h-30zM430 250h30v60h-30z"/><path d="M0 945H900" stroke="#e1bd80" stroke-width="4"/></g>
+<g font-family="Arial,sans-serif" fill="#fff"><text x="58" y="88" font-size="23" letter-spacing="8" opacity=".8">PIXELVERSE / PC GAME</text><path d="M58 112H842" stroke="#fff" stroke-opacity=".3"/><text x="58" y="1005" font-size="58" font-weight="700" letter-spacing="2">AGE OF EMPIRES</text><text x="58" y="1075" font-size="58" font-weight="700" letter-spacing="2" fill="#e8c889">IV</text><text x="842" y="1120" text-anchor="end" font-size="18" letter-spacing="6" opacity=".65">13 / 13</text></g></svg>
