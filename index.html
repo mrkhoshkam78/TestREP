@@ -1,98 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Infinite Alchemy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="Pixelverse؛ ویترین بازی‌های کامپیوتر با معرفی، جست‌وجو و دسته‌بندی بازی‌ها.">
+  <title>Pixelverse | دنیای بازی‌های کامپیوتر</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="atmosphere" aria-hidden="true"></div>
-  <header class="topbar">
-    <div class="brand">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <div>
-        <h1>Infinite Alchemy</h1>
-        <p>Tap a reagent, then another, then Bind.</p>
-      </div>
-    </div>
-    <div class="meters">
-      <div class="meter">
-        <span class="meter-label">Level <b id="level">1</b></span>
-        <div class="bar"><i id="xp-bar"></i></div>
-        <span class="meter-sub" id="xp-text">0 / 40 XP</span>
-      </div>
-      <div class="meter">
-        <span class="meter-label">Discoveries</span>
-        <div class="bar gold"><i id="prog-bar"></i></div>
-        <span class="meter-sub" id="prog-text">0 / 500</span>
-      </div>
-    </div>
-    <div class="top-actions">
-      <button type="button" id="btn-sound" class="ghost" title="Toggle sound">Sound</button>
-      <button type="button" id="btn-export" class="ghost">Export</button>
-      <button type="button" id="btn-import" class="ghost">Import</button>
-      <input id="import-file" type="file" accept="application/json" hidden />
-      <button type="button" id="btn-reset" class="ghost danger">Reset</button>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Pixelverse صفحه اصلی">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span class="brand-name">PIXEL<span>VERSE</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
+      <a class="nav-link active" href="#home">خانه</a>
+      <a class="nav-link" href="#games">بازی‌ها</a>
+      <a class="nav-link" href="#genres">ژانرها</a>
+      <a class="nav-link" href="#about">درباره ما</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button favorites-shortcut" id="favoritesShortcut" type="button" aria-label="نمایش علاقه‌مندی‌ها" title="علاقه‌مندی‌ها">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 5.1-8.8 10.2-8.8 10.2S3.2 13.8 3.2 8.7A4.6 4.6 0 0 1 12 6.3a4.6 4.6 0 0 1 8.8 2.4Z"/></svg>
+        <span class="favorite-count" id="favoriteCount">0</span>
+      </button>
+      <a class="header-cta" href="#games">شروع کاوش <span>↗</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="باز کردن منو" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
 
-  <nav class="tabs" aria-label="Sections">
-    <button type="button" data-tab="lab" class="active">Lab</button>
-    <button type="button" data-tab="items">Items</button>
-    <button type="button" data-tab="book">Codex</button>
-  </nav>
-
   <main>
-    <section class="panel inventory" data-panel="items">
-      <div class="panel-head">
-        <h2>Reagents</h2>
-        <input id="search" type="search" placeholder="Search discoveries…" autocomplete="off" />
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> دنیای بازی، یک کلیک تا تو</div>
+        <h1>بازی بعدی‌ات را<br><span class="gradient-text">کشف کن.</span></h1>
+        <p class="hero-description">از جهان‌های فانتزی تا شهرهای آینده؛ وارد ویترینی شو که برای عاشقان بازی‌های کامپیوتر ساخته شده است.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#games">گشت‌وگذار در بازی‌ها <span>←</span></a>
+          <button class="button button-ghost" id="randomGame" type="button"><span class="dice-icon">✧</span> غافلگیرم کن</button>
+        </div>
+        <div class="hero-meta">
+          <div class="avatar-stack" aria-hidden="true"><span>G</span><span>⌁</span><span>✦</span><b>+</b></div>
+          <div><strong>برای سلیقه‌های متفاوت</strong><small>ماجراجویی، اکشن، نقش‌آفرینی و بیشتر</small></div>
+        </div>
       </div>
-      <div class="filters" id="filters"></div>
-      <div class="grid" id="inventory"></div>
+
+      <div class="hero-visual" aria-label="نمای سه‌بعدی گرافیکی از دنیای بازی">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-platform platform-back"></div>
+        <div class="hero-platform platform-front"></div>
+        <div class="hero-art-card" id="heroTilt">
+          <div class="art-topline"><span>PIXELVERSE / 001</span><span class="live-label"><i></i> FEATURED</span></div>
+          <div class="hero-city">
+            <div class="moon"></div>
+            <div class="city-sun"></div>
+            <div class="tower tower-one"></div><div class="tower tower-two"></div><div class="tower tower-three"></div><div class="tower tower-four"></div>
+            <div class="hero-road"></div>
+            <div class="hero-silhouette"><span></span></div>
+          </div>
+          <div class="hero-art-footer"><div><small>WORLD / 01</small><strong>BEYOND THE SCREEN</strong></div><span class="hero-round-arrow">↗</span></div>
+        </div>
+        <div class="float-chip chip-top"><span class="chip-icon">◈</span><span><b>Explore</b><small>جهان‌های تازه</small></span></div>
+        <div class="float-chip chip-bottom"><span class="chip-icon violet">✦</span><span><b>12+ منتخب</b><small>برای شروع ماجراجویی</small></span></div>
+        <div class="mini-cube" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="hero-bottom-line"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 — 04</span></div>
     </section>
 
-    <section class="panel lab" data-panel="lab">
-      <div class="panel-head">
-        <h2>Crucible</h2>
-        <button type="button" id="hint" class="ghost">Hint <span id="hint-count">3</span></button>
-      </div>
-      <div class="crucible" id="crucible">
-        <button type="button" class="slot" id="slot-a" aria-label="First reagent"></button>
-        <div class="merge-sigil" aria-hidden="true"><span></span></div>
-        <button type="button" class="slot" id="slot-b" aria-label="Second reagent"></button>
-      </div>
-      <button type="button" id="combine" class="combine" disabled>Bind</button>
-      <p class="lab-note" id="lab-note">Place two reagents in the crucible. Order does not matter. The same pair always yields the same work.</p>
-      <div class="result" id="result" hidden></div>
-      <div class="challenges">
-        <h3>Challenges</h3>
-        <ul id="challenge-list"></ul>
-      </div>
+    <section class="stats-strip section-shell" aria-label="ویژگی‌های سایت">
+      <div class="stat-item"><span class="stat-icon">◉</span><div><strong>ویترین منتخب</strong><small>بازی‌هایی برای کشف</small></div></div>
+      <div class="stat-item"><span class="stat-icon purple">⌘</span><div><strong>دسته‌بندی هوشمند</strong><small>پیدا کردن سریع‌تر</small></div></div>
+      <div class="stat-item"><span class="stat-icon cyan">♡</span><div><strong>لیست شخصی</strong><small>ذخیره بازی‌های محبوب</small></div></div>
+      <div class="stat-note">بدون شلوغی؛ فقط دنیای بازی‌ها <span>✳</span></div>
     </section>
 
-    <section class="panel book" data-panel="book">
-      <div class="panel-head">
-        <h2>Codex</h2>
-        <span class="meter-sub" id="book-count"></span>
+    <section class="games-section section-shell" id="games">
+      <div class="section-heading">
+        <div><div class="eyebrow muted-eyebrow"><span class="tiny-dash"></span> GAME LIBRARY</div><h2>ویترین <span class="gradient-text">بازی‌ها</span></h2><p>بازی مناسب حال‌وهوایت را پیدا کن.</p></div>
+        <div class="library-counter"><strong id="visibleCount">۱۳</strong><span>بازی در ویترین</span></div>
       </div>
-      <article class="detail" id="detail">
-        <p class="empty-detail">Select a discovery to read its binding.</p>
-      </article>
-      <h3>Unlocked bindings</h3>
-      <div class="codex-list" id="codex-list"></div>
-      <div class="achieve">
-        <h3>Achievements</h3>
-        <ul id="achieve-list"></ul>
+
+      <div class="library-tools">
+        <label class="search-box" for="gameSearch">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+          <input id="gameSearch" type="search" placeholder="نام بازی یا سبک موردعلاقه‌ات..." autocomplete="off">
+          <kbd>⌕</kbd>
+        </label>
+        <div class="sort-wrap"><span>مرتب‌سازی</span><select id="sortSelect" aria-label="مرتب‌سازی بازی‌ها"><option value="featured">پیشنهادی</option><option value="az">نام: الف تا ی</option><option value="year">جدیدترها</option></select></div>
       </div>
+
+      <div class="filter-row" id="genres">
+        <div class="filter-scroll" id="genreFilters" role="group" aria-label="فیلتر ژانر">
+          <button class="filter-chip active" type="button" data-genre="all">همه بازی‌ها <span>13</span></button>
+          <button class="filter-chip" type="button" data-genre="action">اکشن</button>
+          <button class="filter-chip" type="button" data-genre="rpg">نقش‌آفرینی</button>
+          <button class="filter-chip" type="button" data-genre="adventure">ماجراجویی</button>
+          <button class="filter-chip" type="button" data-genre="racing">مسابقه‌ای</button>
+          <button class="filter-chip" type="button" data-genre="strategy">استراتژی</button>
+        </div>
+        <button class="filter-favorites" id="favoritesFilter" type="button"><span>♡</span> فقط علاقه‌مندی‌ها</button>
+      </div>
+
+      <div class="games-grid" id="gamesGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><div class="empty-orb">⌕</div><strong>چیزی پیدا نشد!</strong><p>عبارت جست‌وجو یا فیلتر ژانر را تغییر بده.</p><button type="button" class="button button-ghost" id="resetFilters">نمایش همه بازی‌ها</button></div>
+    </section>
+
+    <section class="feature-banner section-shell" id="about">
+      <div class="feature-decoration"><div class="feature-ring"></div><div class="feature-cross">✳</div><div class="feature-spark">✦</div></div>
+      <div class="feature-content"><div class="eyebrow"><span class="pulse-dot"></span> YOUR NEXT ADVENTURE</div><h2>هر بازی، یک<br><span class="gradient-text">جهان تازه.</span></h2><p>Pixelverse یک ویترین جمع‌وجور برای آشنایی با بازی‌های کامپیوتر است؛ بازی‌ها را مرور کن، جزئیاتشان را ببین و لیست دلخواهت را بساز.</p><a class="button button-primary" href="#games">انتخاب بازی <span>←</span></a></div>
+      <div class="feature-side-card"><div class="feature-card-inner"><span>PX / 2026</span><div class="feature-symbol">P<span>.</span></div><strong>PLAY BEYOND</strong><small>THE ORDINARY</small><div class="feature-card-line"></div></div></div>
     </section>
   </main>
 
-  <div class="toast-wrap" id="toasts" aria-live="polite"></div>
-  <script src="data/alchemy.js"></script>
-  <script src="game.js"></script>
+  <footer class="site-footer section-shell">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark"><i></i><i></i><i></i></span><span class="brand-name">PIXEL<span>VERSE</span></span></a>
+    <p>برای آن‌هایی که بازی را فقط بازی نمی‌بینند.</p>
+    <div class="footer-right"><span>© 2026 PIXELVERSE</span><a href="#home">بازگشت به بالا ↑</a></div>
+  </footer>
+
+  <div class="modal-backdrop" id="gameModal" hidden>
+    <section class="game-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="بستن پنجره">×</button>
+      <div class="modal-cover" id="modalCover"></div>
+      <div class="modal-content"><div class="modal-kicker" id="modalKicker">GAME PROFILE / PC</div><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="modal-tags" id="modalTags"></div><div class="modal-footer"><span class="modal-year" id="modalYear"></span><button class="button button-primary" id="modalFavorite" type="button">♡ افزودن به علاقه‌مندی‌ها</button></div></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
 </body>
 </html>
